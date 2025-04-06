@@ -63,22 +63,22 @@ const Battle = () => {
           playerTwo
         />
 
-        <div className="flex items-center flex-row">
+        <div className='flex items-center flex-row'>
           <ActionButton
             imgUrl={attack}
             handleClick={() => {}}
-            restStyles="mr-2 hover:border-yellow-400"
+            restStyles='mr-2 hover:border-yellow-400'
           />
           <Card
             card={player1}
             title={player1?.playerName}
             cardRef={player1Ref}
-            restStyles="mt-3"
+            restStyles='mt-3'
           />
           <ActionButton
             imgUrl={defense}
             handleClick={() => {}}
-            restStyles="ml-6 hover:border-red-600"
+            restStyles='ml-6 hover:border-red-600'
           />
         </div>
       </div>
