@@ -6,7 +6,7 @@ import { CustomButton, PageHOC } from '../components'
 import styles from '../styles'
 
 const JoinBattle = () => {
-  const { contract, gameData, setShowAlert, setBattleName, walletAddress } = useGlobalContext()
+  const { contract, gameData, setShowAlert, setBattleName, walletAddress, setErrorMessage } = useGlobalContext()
   const navigate = useNavigate()
 
   const handleClick = async (battleName) => {
@@ -17,7 +17,7 @@ const JoinBattle = () => {
 
       setShowAlert({ status: true, type: 'success', message: `Joining ${battleName}`})
     } catch (error) {
-      
+      setErrorMessage(error)
     }
   }
   
