@@ -15,11 +15,9 @@ const GameInfo = () => {
     const battleName = gameData.activeBattle.name
 
     try {
-      await contract.quitBattle(battleName, {
-        gasLimit: 200000
-      })
+      await contract.quitBattle(battleName, { gasLimit: 200000 })
 
-      setShowAlert({ status: true, type: 'info', message: `You're quitting the ${battleName}`})
+      setShowAlert({ status: true, type: 'info', message: `You're quitting the ${battleName}` })
     } catch (error) {
       setErrorMessage(error)
     }
